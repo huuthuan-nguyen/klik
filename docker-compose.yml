@@ -1,0 +1,38 @@
+version: '3.5'
+
+services:
+  # App Service
+  app:
+    # Configuration for building the docker image for the service
+    build:
+      context: ./ # Use an image built from the specified dockerfile in the current directory.
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080" # Forward the exposed port 8080 on the container to port 8080 on the host machine
+    depends_on:
+      - db
+    restart: unless-stopped
+    networks: # Networks to join (Services on the same network can communicate with each other using their name)
+      - klik
+  db:
+    image: postgres:14.2
+    environment:
+      POSTGRES_USER: klik
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: klik
+      PGDATA: /data/postgres
+    volumes:
+      - db:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - klik # Join klik network
+    restart: unless-stopped
+
+networks:
+  klik:
+    driver: bridge
+
+volumes:
+  db:
+    driver: local
