@@ -229,3 +229,6 @@ Response:
     }
 }
 ```
+
+## Postman Collection
+`https://www.getpostman.com/collections/6e996b399b8afa638cbd`
