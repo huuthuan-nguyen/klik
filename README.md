@@ -179,16 +179,16 @@ Response:
                 "updated_at": "2022-05-18T03:43:25.03941Z"
             },
             {
-            "id": 2,
-            "sku": "IP-001",
-            "name": "iPhone 13 Pro",
-            "quantity": 100,
-            "price": 10000,
-            "unit": "box",
-            "status": 1,
-            "created_by": 2,
-            "create_at": "2022-05-18T03:42:20.611294Z",
-            "updated_at": "2022-05-18T03:43:25.03941Z"
+                "id": 2,
+                "sku": "IP-001",
+                "name": "iPhone 13 Pro",
+                "quantity": 100,
+                "price": 10000,
+                "unit": "box",
+                "status": 1,
+                "created_by": 2,
+                "create_at": "2022-05-18T03:42:20.611294Z",
+                "updated_at": "2022-05-18T03:43:25.03941Z"
             }
         ]
     }
